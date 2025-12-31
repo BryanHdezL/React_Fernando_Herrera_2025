@@ -19,7 +19,12 @@ export const ItemCounter = ({ name = '', quantity = 1 }: Props) => {
 
   return (
     <section className="item-row">
-      <span className="item-text">{name}</span>
+      <span
+        className="item-text"
+        style={{ color: count === 1 ? 'red' : 'black' }}
+      >
+        {name}
+      </span>
       <button onClick={handleAdd}>+1</button>
       <span>{count}</span>
       <button onClick={handleSubtrack}>-1</button>
