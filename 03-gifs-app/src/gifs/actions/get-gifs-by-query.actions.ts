@@ -10,7 +10,7 @@ export const getGifsByQuery = async (query: string): Promise<Gif[]> => {
     },
   })
 
-  console.log(response)
+  // console.log(response)
 
   return response.data.data.map(gif => ({
     id: gif.id,
